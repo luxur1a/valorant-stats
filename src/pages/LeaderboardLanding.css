@@ -1,0 +1,92 @@
+.leaderboard-landing-wrapper {
+    background: var(--cSecondary);
+    color: white;
+    align-items: center;
+    padding: 8rem 4rem 4rem 4rem;
+    width: 100%;
+    min-height: 100%;
+    height: fit-content;
+    
+  }
+  @media (max-width: 540px) {
+    .leaderboard-landing-wrapper{
+      padding: 100px 0 0 2rem;
+      margin: 0;
+    }
+  
+    .leaderboard-landing-wrapper h1 {
+      margin-bottom: 2rem;
+      letter-spacing: 1.5px;
+      font-size: 20px;
+    }
+  }
+  
+  
+  .leaderboard-landing-wrapper h1 {
+    margin-bottom: 2rem;
+    letter-spacing: 1.5px;
+  }
+  
+  .btn-leaderboard-na {
+    display: grid;
+    width: 200px;
+    height: 50px;
+    place-items: center;
+    text-decoration: none;
+    color: white;
+    border: 1px solid var(--cPrimary);
+    border-radius: 5px;
+    background-color: var(--cPrimary);
+    transition: ease-out 0.2s;
+    box-shadow: inset 0 0 0 0 var(--cSecondary);
+    margin-bottom: 1rem;
+  }
+  
+  .btn-leaderboard-na:hover {
+    box-shadow: inset 200px 0 0 0 var(--cSecondary);
+    cursor: pointer;
+    color: var(--cPrimary);
+  }
+
+  .btn-leaderboard-eu {
+    display: grid;
+    width: 200px;
+    height: 50px;
+    place-items: center;
+    text-decoration: none;
+    color: white;
+    border: 1px solid var(--cPrimary);
+    border-radius: 5px;
+    background-color: var(--cPrimary);
+    transition: ease-out 0.2s;
+    box-shadow: inset 0 0 0 0 var(--cSecondary);
+    margin-bottom: 1rem;
+  }
+  
+  .btn-leaderboard-eu:hover {
+    box-shadow: inset 200px 0 0 0 var(--cSecondary);
+    cursor: pointer;
+    color: var(--cPrimary);
+  }
+
+  .btn-leaderboard-ap {
+    display: grid;
+    width: 200px;
+    height: 50px;
+    place-items: center;
+    text-decoration: none;
+    color: white;
+    border: 1px solid var(--cPrimary);
+    border-radius: 5px;
+    background-color: var(--cPrimary);
+    transition: ease-out 0.2s;
+    box-shadow: inset 0 0 0 0 var(--cSecondary);
+    margin-bottom: 1rem;
+  }
+  
+  .btn-leaderboard-ap:hover {
+    box-shadow: inset 200px 0 0 0 var(--cSecondary);
+    cursor: pointer;
+    color: var(--cPrimary);
+  }
+  

@@ -1,38 +1,74 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Shippori Antique", sans-serif;
+  overflow-x: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --cPrimary : #FF4554;
+  --cSecondary : #101823;
+  background: var(--cSecondary);
+  overflow-x: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header{
+  overflow-x: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+footer {
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: var(--cPrimary);
+  justify-content: space-around;
+  align-items: center;
+  min-width: max-content;
+  margin: 15px;
+  border-radius: 25px ;
+  box-shadow: 0px 5px 12px rgba(184, 41, 41, 0.53);
+}
+
+.iconWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-decoration: none;
+  color: rgb(255, 186, 186);
+  
+  font-family: Verdana;
+  padding: 15px 0px;
+  font-size: 12px;
 }
 
-.App-link {
-  color: #61dafb;
+.icon {
+  margin-bottom: 4px;
+  font-size: 22px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.active {
+  color: var(--cSecondary);
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+
+::-webkit-scrollbar-track {
+  background: var(--cSecondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--cPrimary);
+  border: 4px solid transparent;
+  border-radius: 8px;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cPrimary);
 }

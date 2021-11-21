@@ -1,0 +1,68 @@
+.homepage-wrapper {
+  background: var(--cSecondary);
+  color: white;
+  align-items: center;
+  padding: 8rem 4rem 4rem 4rem;
+  /* margin: 0 4rem 0 4rem; */
+  width: 100%;
+  min-height: 100%;
+  height: fit-content;
+}
+@media (max-width: 540px) {
+  .homepage-wrapper {
+    padding: 100px 2rem 0 2rem;
+    margin: 0 0 0 0;
+  }
+
+  .homepage-wrapper h1 {
+    margin-bottom: 2rem;
+    letter-spacing: 1.5px;
+    font-size: 20px;
+  }
+}
+
+.homepage-wrapper h1 {
+  letter-spacing: 1.5px;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: grid;
+  width: 200px;
+  height: 50px;
+  place-items: center;
+  text-decoration: none;
+  color: white;
+  border: 1px solid var(--cPrimary);
+  border-radius: 5px;
+  background-color: var(--cPrimary);
+  transition: ease-out 0.2s;
+  box-shadow: inset 0 0 0 0 var(--cSecondary);
+  margin-bottom: 2rem;
+}
+
+.btn:hover {
+  box-shadow: inset 200px 0 0 0 var(--cSecondary);
+  cursor: pointer;
+  color: var(--cPrimary);
+}
+
+.btn-about {
+  display: grid;
+  width: 200px;
+  height: 50px;
+  place-items: center;
+  text-decoration: none;
+  color: var(--cPrimary);
+  border-radius: 5px;
+  background-color: none;
+  margin-bottom: 2rem;
+  border: 0px solid var(--cPrimary);
+}
+
+.btn-about:hover {
+  cursor: pointer;
+  color: var(--cPrimary);
+  border: 1px solid var(--cPrimary);
+  transition: ease-in 2s;
+}
