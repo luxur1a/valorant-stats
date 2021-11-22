@@ -5,7 +5,6 @@ function Homepage() {
   return (
     <div className="homepage-wrapper">
       <h1>Welcome to VALORANT-Stats.</h1>
-      <br />
       <div className="homepage-buttons">
         <a href="./leaderboard" className="btn">
           Leaderboard
@@ -18,10 +17,8 @@ function Homepage() {
         </a>
       </div>
       <div className="pic">
-      <img src="/images/Phoenix.png" alt="" height="200px">
-      </img>
+        <img src="/images/Phoenix.png" alt="" />
       </div>
-      
     </div>
   );
 }

@@ -3,8 +3,33 @@
   height: 150px;
   width: 150px;
   border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+h2{
+  margin-bottom: 8px;
+
 }
 
 .subtitle{
     margin-bottom: 2rem;
+    text-align: center;
+    font-size: 24px;
+}
+
+.about-info p{
+  margin-bottom: 8px;
+}
+
+.about-nim{
+  display: flex;
+  align-items: flex-end;
+  font-family: "Outfit", sans-serif;
+  color: rgba(31, 110, 136, 1);
+  transition: ease-out 0.3s;
+}
+
+.about-nim:hover{
+  color: rgb(21, 230, 245);
+  transition: ease-in 0.3s;
 }
