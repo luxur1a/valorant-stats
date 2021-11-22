@@ -1,4 +1,3 @@
-@import url('http://fonts.cdnfonts.com/css/valorant');
 
 @media (max-width: 540px) {
   .navbaritems {
@@ -35,13 +34,13 @@
   cursor: pointer;
   align-self: center;
   width: fit-content;
-  font-family: "VALORANT", sans-serif;
+  font-family: "VALORANT Regular";
 }
 
-.navbar-title a{
+.navbar-title a {
   text-decoration: none;
   color: var(--cSecondary);
-  font-family: "VALORANT", sans-serif;
+  font-family: "VALORANT Regular";
 }
 
 .menu-icon {
