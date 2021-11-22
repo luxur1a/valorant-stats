@@ -42,35 +42,36 @@
 
 .profile-body:hover {
   border: 2px solid rgba(45, 180, 224, 1);
-  border-radius: 12px;
 }
 
 .profile-body:hover .rank {
   color: rgb(21, 230, 245);
 }
 
-.pCard {
+.profileCard {
   display: flex;
   flex-direction: row;
+  border-radius: 8px;
 }
 
 .profile-description {
   display: flex;
-  padding-left: 20px;
   flex-direction: column;
   align-items: center;
+  padding-top: 1rem;
 }
 
 .p-name {
   font-family: "Outfit", sans-serif;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 28px;
 }
 
 .p-tag {
   font-family: "Outfit", sans-serif;
   color: rgba(31, 110, 136, 1);
   transition: ease-out 0.3s;
+  margin-bottom: 1rem;
 }
 
 .p-tag:hover {
@@ -78,14 +79,28 @@
   transition: ease-in 0.3s;
 }
 
+.text-profile {
+  color: rgba(31, 110, 136, 1);
+  font-size: 20px;
+}
+
+
+.p-level{
+  margin-bottom: 1rem;
+  font-size: 24px;
+}
+
 .p-rr {
   color: white;
-  padding-top: 1rem;
   font-family: "Outfit", sans-serif;
   font-weight: 400;
-  font-size: 20px;
-  letter-spacing: 1.5px;
-  opacity: 70%;
+  font-size: 24px;
+  margin-bottom: 1rem;
+}
+
+.p-elo {
+  font-size: 24px;
+  margin-bottom: 2rem;
 }
 
 

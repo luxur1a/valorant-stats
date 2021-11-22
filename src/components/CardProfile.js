@@ -20,11 +20,11 @@ export default function CardProfile({
       <div className="profile-description">
         <div className="p-name">{name}</div>
         <div className="p-tag">#{tag}</div>
-        <p>Account Level</p>
+        <p className="text-profile">Account Level</p>
         <div className="p-level">{level}</div>
-        <p>Rank</p>
+        <p className="text-profile">Rank</p>
         <div className="p-rr">{tier}</div>
-        <p>ELO</p>
+        <p className="text-profile">ELO</p>
         <div className="p-elo">{elo}</div>
       </div>
     </div>
