@@ -1,3 +1,5 @@
+@import url('http://fonts.cdnfonts.com/css/valorant');
+
 @media (max-width: 540px) {
   .navbaritems {
     background: var(--cPrimary);

@@ -20,7 +20,7 @@ function Leaderboard() {
   }, []);
 
     if (loading) {
-      return <p>Data is loading...</p>;
+      return <p color="white">Data is loading...</p>;
     }
 
 
