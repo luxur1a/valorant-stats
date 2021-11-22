@@ -42,7 +42,7 @@ function Profile() {
   };
 
   return (
-    <div className="homepage-wrapper">
+    <div className="profile-wrapper">
       <h1>Check your PROFILE.</h1>
       <br />
       <div>

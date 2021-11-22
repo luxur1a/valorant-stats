@@ -1,45 +1,59 @@
-import { React, useEffect, useState} from "react";
+import { React, useEffect, useState } from "react";
 import CardList from "../components/CardList";
 import "./LeaderboardEU.css";
 import axios from "axios";
+import { NavLink } from "react-router-dom";
 
-function LeaderboardEU() {
-    const [data, setData] = useState([]);
-    const [loading, setLoading] = useState(false);
-  
-    useEffect(() => {
-      setLoading(true);
-      axios
-        .get("https://api.henrikdev.xyz/valorant/v1/leaderboard/eu")
-        .then((response) => {
-          console.log(response.data);
-          setData(response.data);
-          setLoading(false);
-        });
-    }, []);
-  
-      if (loading) {
-        return <p>Data is loading...</p>;
-      }
-  
-  
+function LeaderboardEU(props) {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const { history } = props;
+
+  useEffect(() => {
+    setLoading(true);
+    axios
+      .get("https://api.henrikdev.xyz/valorant/v1/leaderboard/eu")
+      .then((response) => {
+        console.log(response.data);
+        setData(response.data);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
     return (
-      <>
-        <div className="leaderboard-wrapper">
-          <h1>EU Leaderboard </h1>
-          {data.filter((i, idx) => idx <100).map((item, index) => (
-            <CardList
-              key={index}
-              PlayerCardID={item.PlayerCardID}
-              gameName={item.gameName}
-              tagLine={item.tagLine}
-              leaderboardRank={item.leaderboardRank}
-              rankedRating={item.rankedRating}
-            />
-          ))}
-        </div>
-      </>
+      <div className="detail-wrapper">
+        <h2>Loading....</h2>
+      </div>
     );
+  }
+  return (
+    <>
+      <div className="leaderboard-wrapper">
+        <h1>NA Leaderboard </h1>
+        {data
+          .filter((i, idx) => idx < 100)
+          .map((item, index) => (
+            <NavLink
+              className="navlink"
+              key={index}
+              to={`/leaderboard/eu/${item.gameName}/${item.tagLine}`}
+              onClick={() =>
+                history.push(`/leaderboard/eu/${item.gameName}/${item.tagLine}`)
+              }
+            >
+              <CardList
+                PlayerCardID={item.PlayerCardID}
+                gameName={item.gameName}
+                tagLine={item.tagLine}
+                leaderboardRank={item.leaderboardRank}
+                rankedRating={item.rankedRating}
+              />
+            </NavLink>
+          ))}
+      </div>
+    </>
+  );
 }
 
-export default LeaderboardEU
+export default LeaderboardEU;

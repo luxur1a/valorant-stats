@@ -1,10 +1,14 @@
+* {
+  text-decoration: none;
+}
+
 @media (max-width: 540px) {
   .pCard {
     width: 60px;
     height: 60px;
   }
 
-  .card-body {
+  .card-body{
     margin: 0 0 0 0;
     width: 100%;
     padding: 0 0.2rem 0 0.2rem;
@@ -21,6 +25,7 @@
   .name {
     margin-right: 0.5rem;
     font-size: 14px;
+    color: white;
   }
 
   .tag {
@@ -44,6 +49,7 @@
   transition: ease-out 0.5s;
   position: relative;
   align-items: center;
+  text-decoration: none;
 }
 
 .card-body:hover {
@@ -98,6 +104,8 @@
   font-weight: 500;
   font-size: 18px;
   margin-right: 0.5rem;
+  text-decoration: none;
+  color: white;
 }
 
 .tag {

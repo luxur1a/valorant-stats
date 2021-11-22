@@ -1,12 +1,13 @@
-import { React, useEffect, useState} from "react";
+import { React, useEffect, useState } from "react";
 import CardList from "../components/CardList";
 import "./Leaderboard.css";
 import axios from "axios";
+import { NavLink } from 'react-router-dom';
 
-function Leaderboard() {
-
+function Leaderboard(props) {
   const [data, setData] = useState([]);
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const { history } = props;
 
   useEffect(() => {
     setLoading(true);
@@ -19,25 +20,37 @@ function Leaderboard() {
       });
   }, []);
 
-    if (loading) {
-      return <p color="white">Data is loading...</p>;
-    }
-
+  if (loading) {
+    return (
+      <div className="detail-wrapper">
+        <h2>Loading....</h2>
+      </div>
+    );
+  }
 
   return (
     <>
       <div className="leaderboard-wrapper">
         <h1>NA Leaderboard </h1>
-        {data.filter((i, idx) => idx <100).map((item, index) => (
-          <CardList
-            key={index}
-            PlayerCardID={item.PlayerCardID}
-            gameName={item.gameName}
-            tagLine={item.tagLine}
-            leaderboardRank={item.leaderboardRank}
-            rankedRating={item.rankedRating}
-          />
-        ))}
+        {data
+          .filter((i, idx) => idx < 100)
+          .map((item, index) => (
+            <NavLink className="navlink"
+              key={index}
+              to={`/leaderboard/na/${item.gameName}/${item.tagLine}`}
+              onClick={() =>
+                history.push(`/leaderboard/na/${item.gameName}/${item.tagLine}`)
+              }
+            >
+              <CardList
+                PlayerCardID={item.PlayerCardID}
+                gameName={item.gameName}
+                tagLine={item.tagLine}
+                leaderboardRank={item.leaderboardRank}
+                rankedRating={item.rankedRating}
+              />
+            </NavLink>
+          ))}
       </div>
     </>
   );

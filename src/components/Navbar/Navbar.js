@@ -9,7 +9,7 @@ class Navbar extends Component {
           <img src="/images/logo.png" alt=""></img>
         </div>
         <h1 className="navbar-title">
-          <a href="../homepage">VALORANT Stats</a>
+          <a href="/homepage">VALORANT Stats</a>
         </h1>
       </nav>
     );

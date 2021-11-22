@@ -17,25 +17,39 @@ import About from "./pages/About";
 import { HiHome } from "react-icons/hi";
 import { MdGroup } from "react-icons/md";
 import Profile from "./pages/Profile";
+import { createBrowserHistory } from "history";
+import Detail from "./pages/Detail";
+
+const history = new createBrowserHistory();
 
 function App() {
   return (
-    
-    <BrowserRouter>
-    <header>
-      <Navbar/>
-    </header>
+    <BrowserRouter history={history}>
+      <header>
+        <Navbar />
+      </header>
       <Routes>
         <Route path="/" element={<Navigate replace to="/homepage" />}></Route>
         <Route path="/homepage" element={<Homepage />}></Route>
         <Route path="/leaderboard" element={<LeaderboardLanding />}></Route>
+
         <Route path="/leaderboard/na" element={<Leaderboard />}></Route>
+        <Route
+          path="/leaderboard/:region/:itemUsername/:itemTagline"
+          element={<Detail />}
+        ></Route>
         <Route path="/leaderboard/eu" element={<LeaderboardEU />}></Route>
+        <Route
+          path="/leaderboard/:region/:itemUsername/:itemTagline"
+          element={<Detail />}
+        ></Route>
         <Route path="/leaderboard/ap" element={<LeaderboardAP />}></Route>
+        <Route
+          path="/leaderboard/:region/:itemUsername/:itemTagline"
+          element={<Detail />}
+        ></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/profile" element={<Profile />}></Route>
-        {/* <Route path="/movie" element={<Movie />}></Route>
-        <Route path="/profile" element={<Profile />}></Route> */}
       </Routes>
       <footer>
         <NavLink to="/homepage" className="iconWrapper">
@@ -47,7 +61,6 @@ function App() {
           About
         </NavLink>
       </footer>
-      
     </BrowserRouter>
   );
 }

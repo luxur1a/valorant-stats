@@ -1,3 +1,19 @@
+.navlink {
+  text-decoration: none;
+}
+
+.navlink:hover {
+  text-decoration: none;
+}
+.navlink:focus {
+  text-decoration: none;
+}
+.navlink:visited {
+  text-decoration: none;
+}
+.navlink.active {
+  text-decoration: none;
+}
 
 #leaderboard {
   color: white;

@@ -3,19 +3,16 @@
   margin: 0;
   padding: 0;
   font-family: "Outfit";
-  overflow-x: none;
+  text-decoration: none;
 }
 
 :root {
   --cPrimary: #ff4554;
   --cSecondary: #101823;
   background: var(--cSecondary);
-  overflow-x: none;
 }
 
-header {
-  overflow-x: none;
-}
+
 
 footer {
   display: flex;

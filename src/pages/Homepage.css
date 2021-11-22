@@ -1,7 +1,7 @@
 @media screen and (max-width: 540px) {
-  .homepage-wrapper {
-    /* padding: 100px 1rem 0 1rem; */
-  }
+  /* .homepage-wrapper {
+    padding: 100px 1rem 0 1rem;
+  } */
 
   .homepage-wrapper h1 {
     margin-bottom: 2rem;
@@ -43,11 +43,11 @@
   align-items: center;
   background: var(--cSecondary);
   color: white;
-  /* padding: 8rem 4rem 0 4rem; */
+  padding: 8rem 4rem 0 4rem;
   width: 100%;
   /* min-height: 100%; */
   /* height: fit-content; */
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 .btn {
