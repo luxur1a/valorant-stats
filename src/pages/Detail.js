@@ -37,7 +37,7 @@ function Profile() {
         setData(response.data.data);
         setLoading(false);
       });
-  }, [itemUsername, itemTagline]);
+  }, [region, itemUsername, itemTagline]);
   //   console.log(profile);
   //   console.log(data);
 
