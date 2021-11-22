@@ -94,7 +94,7 @@
 .name {
   display: flex;
   align-self: flex-end;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   font-weight: 500;
   font-size: 18px;
   margin-right: 0.5rem;
@@ -103,7 +103,7 @@
 .tag {
   display: flex;
   align-items: flex-end;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   color: rgba(31, 110, 136, 1);
   transition: ease-out 0.3s;
 }
@@ -111,15 +111,14 @@
 .rr {
   text-align: left;
   padding-top: 1rem;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   font-weight: 400;
   font-size: 12px;
   letter-spacing: 1.5px;
-  opacity: 70%;
+  color: #b7b9bd;
 }
 
 .tag:hover {
   color: rgb(21, 230, 245);
   transition: ease-in 0.3s;
 }
-
