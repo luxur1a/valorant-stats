@@ -5,13 +5,7 @@ import "./Detail.css";
 import { useParams } from "react-router";
 
 function Profile() {
-  // const onSubmit = (data) => {
-  //   console.log(data);
-  // };
 
-  //   const [username, setUsername] = useState("");
-  //   const [tag, setTag] = useState("");
-  //   const [region, setRegion] = useState("AP");
   const [profile, setProfile] = useState({});
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(false);
@@ -38,8 +32,6 @@ function Profile() {
         setLoading(false);
       });
   }, [region, itemUsername, itemTagline]);
-  //   console.log(profile);
-  //   console.log(data);
 
   if (loading) {
     return (
