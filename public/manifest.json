@@ -1,6 +1,8 @@
 {
   "short_name": "Valorant Stats.",
   "name": "Create React App Sample",
+  "description": "Check your stats online.",
+  "lang": "en-US",
   "icons": [
     {
       "src": "favicon.ico",

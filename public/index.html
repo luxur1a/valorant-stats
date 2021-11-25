@@ -2,13 +2,25 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <meta name="Description" content="Deskripsi Singkat Situs" />
+    <!-- Mendeklarasikan warna yang muncul pada address bar Chrome versi seluler -->
+    <meta name="theme-color" content="#FF4554" />
+    <!-- Mendeklarasikan ikon untuk iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Valorant Stats" />
+    <link rel="apple-touch-icon" href="/images/logo192.png" />
+    <!-- Mendeklarasikan ikon untuk Windows -->
+    <meta name="msapplication-TileImage" content="/images/logo192.png" />
+    <meta name="msapplication-TileColor" content="#000000" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Check your VALORANT Leaderboard and Stats."
     />
+    <link rel="manifest" href="/manifest.json" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -32,6 +44,13 @@
     />
   </head>
   <body>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("/sw.js");
+        });
+      }
+    </script>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
