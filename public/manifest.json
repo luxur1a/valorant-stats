@@ -1,6 +1,6 @@
 {
   "short_name": "Valorant Stats.",
-  "name": "Create React App Sample",
+  "name": "Valorant Stats.",
   "description": "Check your stats online.",
   "lang": "en-US",
   "icons": [
@@ -20,8 +20,9 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "./",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "prefer_related_application": "false"
 }
