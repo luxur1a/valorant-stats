@@ -12,7 +12,7 @@ function LeaderboardEU(props) {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("https://api.henrikdev.xyz/valorant/v1/leaderboard/eu")
+      .get("https://api.henrikdev.xyz/valorant/v2/leaderboard/eu")
       .then((response) => {
         console.log(response.data);
         setData(response.data);

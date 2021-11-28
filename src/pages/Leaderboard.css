@@ -20,6 +20,8 @@
 }
 
 .leaderboard-wrapper {
+  display: grid;
+  grid-template-columns: auto auto;
   background: var(--cSecondary);
   color: white;
   align-items: center;

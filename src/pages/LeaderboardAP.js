@@ -12,7 +12,7 @@ function LeaderboardAP(props) {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("https://api.henrikdev.xyz/valorant/v1/leaderboard/ap")
+      .get("https://api.henrikdev.xyz/valorant/v2/leaderboard/ap")
       .then((response) => {
         console.log(response.data);
         setData(response.data);
