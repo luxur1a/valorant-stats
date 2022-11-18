@@ -92,7 +92,7 @@ function Profile() {
       </div>
       {show && (
         <CardProfile
-          img={profile.card.wide}
+          img={profile.images.large}
           name={data.name}
           tag={data.tag}
           level={profile.account_level}
