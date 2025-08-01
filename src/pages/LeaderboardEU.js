@@ -12,10 +12,18 @@ function LeaderboardEU(props) {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("https://api.henrikdev.xyz/valorant/v2/leaderboard/eu")
+      .get("https://api.henrikdev.xyz/valorant/v3/leaderboard/eu/pc", {
+        headers: {
+          Authorization: "HDEV-f555a675-8c3c-4bab-bf01-cbcfdfe902b8", // Replace with your actual API key
+        },
+      })
       .then((response) => {
         console.log(response.data);
         setData(response.data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error("Request failed:", error);
         setLoading(false);
       });
   }, []);
