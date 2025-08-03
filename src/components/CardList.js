@@ -12,15 +12,15 @@ export default function CardList({
     <div className="card-body" onClick={onClick}>
       <div className="rank">{leaderboardRank}</div>
 
-        <img
-          className="pCard"
-          src={
-            "https://media.valorant-api.com/playercards/" +
-            PlayerCardID +
-            "/smallart.png"
-          }
-          alt=""
-        />
+      <img
+        className="pCard"
+        src={
+          "https://media.valorant-api.com/playercards/" +
+          PlayerCardID +
+          "/smallart.png"
+        }
+        alt=""
+      />
 
       <div className="card-description">
         <div className="first-row">

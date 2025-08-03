@@ -18,24 +18,23 @@ function Profile() {
   const doSearch = (e) => {
     e.preventDefault();
     axios
-      .get(
-        "https://api.henrikdev.xyz/valorant/v1/account/" + username + "/" + tag
-      )
+      .get("/api/valorant/v1/account/" + username + "/" + tag, {
+        headers: {
+          Authorization: "HDEV-f555a675-8c3c-4bab-bf01-cbcfdfe902b8", // Replace with your actual API key
+        },
+      })
       .then((response) => {
-        console.log(response.data.data);
+        console.log("account : ", response.data.data);
         setProfile(response.data.data);
       });
     axios
-      .get(
-        "https://api.henrikdev.xyz/valorant/v1/mmr/" +
-          region +
-          "/" +
-          username +
-          "/" +
-          tag
-      )
+      .get("/api/valorant/v1/mmr/" + region + "/" + username + "/" + tag, {
+        headers: {
+          Authorization: "HDEV-f555a675-8c3c-4bab-bf01-cbcfdfe902b8", // Replace with your actual API key
+        },
+      })
       .then((response) => {
-        console.log(response.data.data);
+        console.log("mmr : ", response.data.data);
         setData(response.data.data);
         setShow(true);
       });
@@ -72,7 +71,7 @@ function Profile() {
               ></input>
             </div>
             <div className="form">
-            <label>Region </label>
+              <label>Region </label>
               <br />
               <select
                 className="select"
@@ -85,14 +84,18 @@ function Profile() {
               </select>
             </div>
             <div>
-            <input className="btn-profile" type="submit" name="submit"></input>
+              <input
+                className="btn-profile"
+                type="submit"
+                name="submit"
+              ></input>
             </div>
           </div>
         </form>
       </div>
       {show && (
         <CardProfile
-          img={profile.images.large}
+          img={profile.card.large}
           name={data.name}
           tag={data.tag}
           level={profile.account_level}

@@ -17,14 +17,12 @@ import About from "./pages/About";
 import { HiHome } from "react-icons/hi";
 import { MdGroup } from "react-icons/md";
 import Profile from "./pages/Profile";
-import { createBrowserHistory } from "history";
 import Detail from "./pages/Detail";
-
-const history = new createBrowserHistory();
 
 function App() {
   return (
-    <BrowserRouter history={history}>
+    // <BrowserRouter>
+    <BrowserRouter future={{ v7_startTransition: true }}>
       <header>
         <Navbar />
       </header>
@@ -62,6 +60,7 @@ function App() {
         </NavLink>
       </footer>
     </BrowserRouter>
+    // </BrowserRouter>
   );
 }
 

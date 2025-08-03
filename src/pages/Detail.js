@@ -5,7 +5,6 @@ import "./Detail.css";
 import { useParams } from "react-router";
 
 function Profile() {
-
   const [profile, setProfile] = useState({});
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(false);
@@ -15,17 +14,21 @@ function Profile() {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(
-        `https://api.henrikdev.xyz/valorant/v1/account/${itemUsername}/${itemTagline}`
-      )
+      .get(`/api/valorant/v1/account/${itemUsername}/${itemTagline}`, {
+        headers: {
+          Authorization: "HDEV-f555a675-8c3c-4bab-bf01-cbcfdfe902b8",
+        },
+      })
       .then((response) => {
         console.log(response.data.data);
         setProfile(response.data.data);
       });
     axios
-      .get(
-        `https://api.henrikdev.xyz/valorant/v1/mmr/${region}/${itemUsername}/${itemTagline}`
-      )
+      .get(`/api/valorant/v1/mmr/${region}/${itemUsername}/${itemTagline}`, {
+        headers: {
+          Authorization: "HDEV-f555a675-8c3c-4bab-bf01-cbcfdfe902b8",
+        },
+      })
       .then((response) => {
         console.log(response.data.data);
         setData(response.data.data);
